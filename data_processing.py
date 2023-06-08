@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
 
-
+Input_File = "./16-09-23.csv"
+Output_File = "./16-09-23_withlabel.csv"
 device_class = {
     "smart-home devices": 1,
     "sensors"           : 2,
@@ -45,7 +46,7 @@ Mac_address_with_class = {
 }
 
 
-df = pd.read_csv("./16-09-23.csv")
+df = pd.read_csv(Input_File)
 
 for index, row in df.iterrows():
     src = row['eth.src']
@@ -59,4 +60,4 @@ for index, row in df.iterrows():
         
 df["address"] = df["address"].astype(int)
 
-df.to_csv('./output.csv', index=False)
+df.to_csv(Output_File, index=False)
