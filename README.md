@@ -1,7 +1,7 @@
 # Decision-Tree-in-P4
-## Table of content
+## Table of contents
 - [Decision-Tree-in-P4](#decision-tree-in-p4)
-  - [Table of content](#table-of-content)
+  - [Table of contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Dataset](#dataset)
   - [Usage](#usage)
