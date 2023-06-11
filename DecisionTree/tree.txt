@@ -1,0 +1,8 @@
+ when pkt_size<=155.5 and pkt_size<=57.5 and ip_protocol<=11.5  then 4;
+ when pkt_size<=155.5 and pkt_size<=57.5 and ip_protocol>11.5  then 4;
+ when pkt_size<=155.5 and pkt_size>57.5 and pkt_size<=60.5  then 0;
+ when pkt_size<=155.5 and pkt_size>57.5 and pkt_size>60.5  then 4;
+ when pkt_size>155.5 and pkt_size<=501.5 and pkt_size<=156.5  then 3;
+ when pkt_size>155.5 and pkt_size<=501.5 and pkt_size>156.5  then 3;
+ when pkt_size>155.5 and pkt_size>501.5 and pkt_size<=1503.0  then 4;
+ when pkt_size>155.5 and pkt_size>501.5 and pkt_size>1503.0  then 4;

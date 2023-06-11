@@ -53,11 +53,11 @@ for index, row in df.iterrows():
     
     if src in Mac_address_with_class:
         # If there is a match, append a new column (address) with dict's corresponding value
-        df.loc[index, 'address'] = Mac_address_with_class[src]
+        df.loc[index, "class"] = Mac_address_with_class[src]
     else:
         # If there is no match, delete the entire row
         df = df.drop(index)
         
-df["address"] = df["address"].astype(int)
+df["class"] = df["class"].astype(int)
 
 df.to_csv(Output_File, index=False)
