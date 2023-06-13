@@ -114,7 +114,7 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-        bit<32> pkt_size = standard_metadata.packet_length;
+        bit<16> pkt_size = hdr.ipv4.totalLen - 20;
         bit<8> ip_protocol = hdr.ipv4.protocol;
 
         // Decision tree logic
