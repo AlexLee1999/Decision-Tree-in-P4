@@ -1,2 +1,6 @@
 *.csv
 .DS_Store
+./tutorials/exercise/basic/build/*
+./tutorials/exercise/basic/logs/*
+./tutorials/exercise/basic/pcap/*
+*.pyc
