@@ -2,5 +2,5 @@
 .DS_Store
 tutorials/exercises/basic/build/*
 tutorials/exercises/basic/logs/*
-tutorials/exercises/basic/pcap/*
+tutorials/exercises/basic/pcaps/*
 *.pyc
