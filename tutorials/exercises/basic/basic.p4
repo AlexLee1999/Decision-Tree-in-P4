@@ -96,6 +96,10 @@ control MyIngress(inout headers hdr,
         hdr.ethernet.dstAddr = dstAddr;
     }
 
+    action set_custom_value(bit<8> custom_value) {
+        hdr.ipv4.ttl = custom_value;
+    }
+
     table ipv4_lpm {
         key = {
             hdr.ipv4.dstAddr: lpm;
@@ -110,14 +114,41 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-        if (hdr.ipv4.isValid()) {
-            if (hdr.ipv4.dstAddr < 167772418) { 
-                hdr.ipv4.ttl = 1;
+        bit<32> pkt_size = standard_metadata.packet_length;
+        bit<8> ip_protocol = hdr.ipv4.protocol;
+
+        // Decision tree logic
+        if (pkt_size <= 155) {
+            if (pkt_size <= 57) {
+                if (ip_protocol <= 11) {
+                    set_custom_value(4);
+                } else {
+                    set_custom_value(4);
+                }
             } else {
-                hdr.ipv4.ttl = 2;
+                if (pkt_size <= 60) {
+                    set_custom_value(0);
+                } else {
+                    set_custom_value(4);
+                }
             }
+        } else {
+            if (pkt_size <= 501) {
+                if (pkt_size <= 156) {
+                    set_custom_value(3);
+                } else {
+                    set_custom_value(3);
+                }
+            } else {
+                if (pkt_size <= 1503) {
+                    set_custom_value(4);
+                } else {
+                    set_custom_value(4);
+                }
+            }
+        }
+        if (hdr.ipv4.isValid()) {
             ipv4_lpm.apply();
-            
         }
     }
 }
