@@ -56,5 +56,12 @@ actions {
     bitwidth: 9
   }
 }
+actions {
+  preamble {
+    id: 29355559
+    name: "MyIngress.set_custom_value"
+    alias: "set_custom_value"
+  }
+}
 type_info {
 }

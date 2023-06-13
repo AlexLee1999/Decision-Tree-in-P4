@@ -176,7 +176,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "basic.p4",
-        "line" : 163,
+        "line" : 194,
         "column" : 8,
         "source_fragment" : "MyDeparser"
       },
@@ -193,7 +193,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "basic.p4",
-        "line" : 141,
+        "line" : 172,
         "column" : 8,
         "source_fragment" : "update_checksum( ..."
       },
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "name" : "basic115",
+      "name" : "MyIngress.set_custom_value",
       "id" : 3,
       "runtime_data" : [],
       "primitives" : [
@@ -363,20 +363,20 @@
             },
             {
               "type" : "hexstr",
-              "value" : "0x01"
+              "value" : "0x04"
             }
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 115,
-            "column" : 16,
-            "source_fragment" : "hdr.ipv4.ttl = 1"
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
           }
         }
       ]
     },
     {
-      "name" : "basic117",
+      "name" : "MyIngress.set_custom_value",
       "id" : 4,
       "runtime_data" : [],
       "primitives" : [
@@ -389,14 +389,170 @@
             },
             {
               "type" : "hexstr",
-              "value" : "0x02"
+              "value" : "0x04"
             }
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 117,
-            "column" : 16,
-            "source_fragment" : "hdr.ipv4.ttl = 2"
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 5,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 6,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x04"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 7,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x03"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 8,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x03"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 9,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x04"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.set_custom_value",
+      "id" : 10,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x04"
+            }
+          ],
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 100,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = custom_value"
           }
         }
       ]
@@ -415,13 +571,13 @@
       "init_table" : "node_2",
       "tables" : [
         {
-          "name" : "tbl_basic115",
+          "name" : "tbl_set_custom_value",
           "id" : 0,
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 115,
-            "column" : 29,
-            "source_fragment" : "="
+            "line" : 124,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(4)"
           },
           "key" : [],
           "match_type" : "exact",
@@ -431,10 +587,10 @@
           "support_timeout" : false,
           "direct_meters" : null,
           "action_ids" : [3],
-          "actions" : ["basic115"],
-          "base_default_next" : "MyIngress.ipv4_lpm",
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
           "next_tables" : {
-            "basic115" : "MyIngress.ipv4_lpm"
+            "MyIngress.set_custom_value" : "node_17"
           },
           "default_entry" : {
             "action_id" : 3,
@@ -444,13 +600,13 @@
           }
         },
         {
-          "name" : "tbl_basic117",
+          "name" : "tbl_set_custom_value_0",
           "id" : 1,
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 117,
-            "column" : 29,
-            "source_fragment" : "="
+            "line" : 126,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(4)"
           },
           "key" : [],
           "match_type" : "exact",
@@ -460,10 +616,10 @@
           "support_timeout" : false,
           "direct_meters" : null,
           "action_ids" : [4],
-          "actions" : ["basic117"],
-          "base_default_next" : "MyIngress.ipv4_lpm",
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
           "next_tables" : {
-            "basic117" : "MyIngress.ipv4_lpm"
+            "MyIngress.set_custom_value" : "node_17"
           },
           "default_entry" : {
             "action_id" : 4,
@@ -473,11 +629,185 @@
           }
         },
         {
-          "name" : "MyIngress.ipv4_lpm",
+          "name" : "tbl_set_custom_value_1",
           "id" : 2,
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 99,
+            "line" : 130,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [5],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 5,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_set_custom_value_2",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 132,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(4)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [6],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 6,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_set_custom_value_3",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 138,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(3)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [7],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 7,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_set_custom_value_4",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 140,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(3)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [8],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 8,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_set_custom_value_5",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 144,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(4)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [9],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 9,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_set_custom_value_6",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 146,
+            "column" : 20,
+            "source_fragment" : "set_custom_value(4)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [10],
+          "actions" : ["MyIngress.set_custom_value"],
+          "base_default_next" : "node_17",
+          "next_tables" : {
+            "MyIngress.set_custom_value" : "node_17"
+          },
+          "default_entry" : {
+            "action_id" : 10,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "MyIngress.ipv4_lpm",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 103,
             "column" : 10,
             "source_fragment" : "ipv4_lpm"
           },
@@ -518,7 +848,189 @@
           "id" : 0,
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 113,
+            "line" : 121,
+            "column" : 12,
+            "source_fragment" : "pkt_size <= 155"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0000009b"
+              }
+            }
+          },
+          "true_next" : "node_3",
+          "false_next" : "node_10"
+        },
+        {
+          "name" : "node_3",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 122,
+            "column" : 16,
+            "source_fragment" : "pkt_size <= 57"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x00000039"
+              }
+            }
+          },
+          "true_next" : "node_4",
+          "false_next" : "node_7"
+        },
+        {
+          "name" : "node_4",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 123,
+            "column" : 20,
+            "source_fragment" : "ip_protocol <= 11"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["ipv4", "protocol"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0b"
+              }
+            }
+          },
+          "true_next" : "tbl_set_custom_value",
+          "false_next" : "tbl_set_custom_value_0"
+        },
+        {
+          "name" : "node_7",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 129,
+            "column" : 20,
+            "source_fragment" : "pkt_size <= 60"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0000003c"
+              }
+            }
+          },
+          "true_next" : "tbl_set_custom_value_1",
+          "false_next" : "tbl_set_custom_value_2"
+        },
+        {
+          "name" : "node_10",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 136,
+            "column" : 16,
+            "source_fragment" : "pkt_size <= 501"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x000001f5"
+              }
+            }
+          },
+          "true_next" : "node_11",
+          "false_next" : "node_14"
+        },
+        {
+          "name" : "node_11",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 137,
+            "column" : 20,
+            "source_fragment" : "pkt_size <= 156"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0000009c"
+              }
+            }
+          },
+          "true_next" : "tbl_set_custom_value_3",
+          "false_next" : "tbl_set_custom_value_4"
+        },
+        {
+          "name" : "node_14",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 143,
+            "column" : 20,
+            "source_fragment" : "pkt_size <= 1503"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "packet_length"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x000005df"
+              }
+            }
+          },
+          "true_next" : "tbl_set_custom_value_5",
+          "false_next" : "tbl_set_custom_value_6"
+        },
+        {
+          "name" : "node_17",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "basic.p4",
+            "line" : 150,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.isValid()"
           },
@@ -534,33 +1046,7 @@
             }
           },
           "false_next" : null,
-          "true_next" : "node_3"
-        },
-        {
-          "name" : "node_3",
-          "id" : 1,
-          "source_info" : {
-            "filename" : "basic.p4",
-            "line" : 114,
-            "column" : 16,
-            "source_fragment" : "hdr.ipv4.dstAddr < 167772418"
-          },
-          "expression" : {
-            "type" : "expression",
-            "value" : {
-              "op" : "<",
-              "left" : {
-                "type" : "field",
-                "value" : ["ipv4", "dstAddr"]
-              },
-              "right" : {
-                "type" : "hexstr",
-                "value" : "0x0a000102"
-              }
-            }
-          },
-          "true_next" : "tbl_basic115",
-          "false_next" : "tbl_basic117"
+          "true_next" : "MyIngress.ipv4_lpm"
         }
       ]
     },
@@ -569,7 +1055,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "basic.p4",
-        "line" : 129,
+        "line" : 160,
         "column" : 8,
         "source_fragment" : "MyEgress"
       },
@@ -585,7 +1071,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "basic.p4",
-        "line" : 141,
+        "line" : 172,
         "column" : 8,
         "source_fragment" : "update_checksum( ..."
       },
