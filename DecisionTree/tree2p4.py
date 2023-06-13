@@ -15,7 +15,7 @@ def read_decision_tree_logic(file_path):
     
     return decision_tree_logic
 
-def condition_to_p4_code(conditions, indent_level=2):
+def condition_to_p4_code(conditions, indent_level=3):
     indent = "    " * indent_level
     code = ""
     for condition in conditions:

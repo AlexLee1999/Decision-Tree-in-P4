@@ -114,12 +114,12 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-        bit<16> pkt_size = hdr.ipv4.totalLen - 20;
-        bit<8> ip_protocol = hdr.ipv4.protocol;
+        if (hdr.ipv4.isValid()) {
+            bit<16> pkt_size = hdr.ipv4.totalLen - 20;
+            bit<8> ip_protocol = hdr.ipv4.protocol;
 
 // Decision tree logic placeholder
         
-        if (hdr.ipv4.isValid()) {
             ipv4_lpm.apply();
         }
     }
