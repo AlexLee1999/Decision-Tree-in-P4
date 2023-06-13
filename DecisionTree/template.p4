@@ -114,17 +114,11 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-        if (hdr.ipv4.isValid()) {
-            if (hdr.ipv4.dstAddr < 167772418) { 
-                hdr.ipv4.ttl = 1;
-            } else {
-                if (pkt_size <= 1503) {
-                    set_custom_value(4);
-                } else {
-                    set_custom_value(4);
-                }
-            }
-        }
+        bit<16> pkt_size = hdr.ipv4.totalLen - 20;
+        bit<8> ip_protocol = hdr.ipv4.protocol;
+
+// Decision tree logic placeholder
+        
         if (hdr.ipv4.isValid()) {
             ipv4_lpm.apply();
         }
