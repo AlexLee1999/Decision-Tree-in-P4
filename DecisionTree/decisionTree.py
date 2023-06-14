@@ -63,7 +63,7 @@ X = [[i[2], i[7]] for i in set_data]
 y = [i[10] for i in set_data]
 features = ['pkt_size', 'ip_protocol']
 #features = ['pkt_size','eth_src','ip_protocol']
-target = ["1", "2", "3", "4", "5"]
+target = ["Smart Home Devices", "Sensors", "Audio Devices", "Video Devices", "Misc."]
 
 X = np.array(X)
 y = np.array(y)
