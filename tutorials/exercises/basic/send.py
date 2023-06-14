@@ -19,7 +19,7 @@ def get_if():
     return iface
 
 def main():
-
+    
     if len(sys.argv)<3:
         print('pass 2 arguments: <destination> "<message>"')
         exit(1)

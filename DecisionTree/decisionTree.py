@@ -3,6 +3,7 @@ import pandas as pd
 import argparse
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
+import graphviz
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', required=True)
@@ -62,12 +63,21 @@ X = [[i[2], i[7]] for i in set_data]
 y = [i[10] for i in set_data]
 features = ['pkt_size', 'ip_protocol']
 #features = ['pkt_size','eth_src','ip_protocol']
+target = ["1", "2", "3", "4", "5"]
 
 X = np.array(X)
 y = np.array(y)
 dt_clf = DecisionTreeClassifier(max_depth=MAX_DEPTH)
 dt_clf.fit(X,y)
-
+dot_data = export_graphviz(dt_clf,
+                           out_file=None,
+                           feature_names=features,
+                           class_names=target,
+                           filled=True,
+                           rounded=True)
+graph = graphviz.Source(dot_data)
+graph.format = 'png'
+graph.render("decision_tree")
 tree = open(o_file,"w+")
 #tree.write("ip_proto = ")
 #tree.write(str(ip_proto))
