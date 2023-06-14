@@ -121,56 +121,56 @@ control MyIngress(inout headers hdr,
             if (pkt_size<=155) {
                 if (pkt_size<=57) {
                     if (ip_protocol<=11) {
-                        set_custom_value(4);
+                        set_custom_value(5);
                     }
                 }
             }
             if (pkt_size<=155) {
                 if (pkt_size<=57) {
                     if (ip_protocol>11) {
-                        set_custom_value(4);
+                        set_custom_value(5);
                     }
                 }
             }
             if (pkt_size<=155) {
                 if (pkt_size>57) {
                     if (pkt_size<=60) {
-                        set_custom_value(0);
+                        set_custom_value(1);
                     }
                 }
             }
             if (pkt_size<=155) {
                 if (pkt_size>57) {
                     if (pkt_size>60) {
-                        set_custom_value(4);
+                        set_custom_value(5);
                     }
                 }
             }
             if (pkt_size>155) {
                 if (pkt_size<=501) {
                     if (pkt_size<=156) {
-                        set_custom_value(3);
+                        set_custom_value(4);
                     }
                 }
             }
             if (pkt_size>155) {
                 if (pkt_size<=501) {
                     if (pkt_size>156) {
-                        set_custom_value(3);
+                        set_custom_value(4);
                     }
                 }
             }
             if (pkt_size>155) {
                 if (pkt_size>501) {
                     if (pkt_size<=1503) {
-                        set_custom_value(4);
+                        set_custom_value(5);
                     }
                 }
             }
             if (pkt_size>155) {
                 if (pkt_size>501) {
                     if (pkt_size>1503) {
-                        set_custom_value(4);
+                        set_custom_value(5);
                     }
                 }
             }

@@ -51,7 +51,7 @@ def parse_tree(tree, features, file):
 
         tmp = list(value[child][0])
         ind = tmp.index(max(tmp))
-        to_write = to_write[:-4] + ' then ' + str(ind)
+        to_write = to_write[:-4] + ' then ' + str(ind + 1)
         file.write(to_write)
         file.write(";\n")
 
