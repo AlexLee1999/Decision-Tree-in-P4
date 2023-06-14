@@ -115,7 +115,7 @@ control MyIngress(inout headers hdr,
 
     apply {
         if (hdr.ipv4.isValid()) {
-            bit<16> pkt_size = hdr.ipv4.totalLen - 20;
+            bit<16> pkt_size = hdr.ipv4.totalLen;
             bit<8> ip_protocol = hdr.ipv4.protocol;
 
             if (pkt_size<=155) {
