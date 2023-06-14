@@ -118,63 +118,7 @@ control MyIngress(inout headers hdr,
             bit<16> pkt_size = hdr.ipv4.totalLen - 20;
             bit<8> ip_protocol = hdr.ipv4.protocol;
 
-            if (pkt_size<=155) {
-                if (pkt_size<=57) {
-                    if (ip_protocol<=11) {
-                        set_custom_value(4);
-                    }
-                }
-            }
-            if (pkt_size<=155) {
-                if (pkt_size<=57) {
-                    if (ip_protocol>11) {
-                        set_custom_value(4);
-                    }
-                }
-            }
-            if (pkt_size<=155) {
-                if (pkt_size>57) {
-                    if (pkt_size<=60) {
-                        set_custom_value(0);
-                    }
-                }
-            }
-            if (pkt_size<=155) {
-                if (pkt_size>57) {
-                    if (pkt_size>60) {
-                        set_custom_value(4);
-                    }
-                }
-            }
-            if (pkt_size>155) {
-                if (pkt_size<=501) {
-                    if (pkt_size<=156) {
-                        set_custom_value(3);
-                    }
-                }
-            }
-            if (pkt_size>155) {
-                if (pkt_size<=501) {
-                    if (pkt_size>156) {
-                        set_custom_value(3);
-                    }
-                }
-            }
-            if (pkt_size>155) {
-                if (pkt_size>501) {
-                    if (pkt_size<=1503) {
-                        set_custom_value(4);
-                    }
-                }
-            }
-            if (pkt_size>155) {
-                if (pkt_size>501) {
-                    if (pkt_size>1503) {
-                        set_custom_value(4);
-                    }
-                }
-            }
-
+// Decision tree logic placeholder
         
             ipv4_lpm.apply();
         }
