@@ -10,7 +10,8 @@ from scapy.all import (
     IPOption,
     ShortField,
     get_if_list,
-    sniff
+    sniff,
+    UDP
 )
 from scapy.layers.inet import _IPOption_HDR
 
@@ -45,7 +46,11 @@ def handle_pkt(pkt):
         pkt.show2()
     #    hexdump(pkt)
         sys.stdout.flush()
-
+    if UDP in pkt and pkt[UDP].dport == 1234:
+        print("got a packet")
+        pkt.show2()
+    #    hexdump(pkt)
+        sys.stdout.flush()
 
 def main():
     ifaces = [i for i in os.listdir('/sys/class/net/') if 'eth' in i]
