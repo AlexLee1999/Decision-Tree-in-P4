@@ -1,6 +1,6 @@
-# Decision-Tree-in-P4
+# Decision Tree in P4
 ## Table of contents
-- [Decision-Tree-in-P4](#decision-tree-in-p4)
+- [Decision Tree in P4](#decision-tree-in-p4)
   - [Table of contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Dataset](#dataset)
@@ -13,17 +13,41 @@
 - Based on the framework from P4 Tutorial exercises, we implement the Packet Classifier in P4. 
 
 ## Dataset
-- [IOT TRAFFIC TRACES](https://iotanalytics.unsw.edu.au/iottraces.html)
-
+- [IOT TRAFFIC TRACES](https://iotanalytics.unsw.edu.au/iottraces.html) (September 22nd, 2016)
 
 
 ## Usage
+Run Decision Tree:
+```
+python3 decisionTree.py -i <input_file> <output_file>
+```
 
+Build mininet & run 
+```
+make run 
+xterm h1 h2
+```
+
+Send data
+```
+python3 send_with_length.py <ip_address> <message length> <TCP/UDP>
+```
+
+Receiving data
+
+```
+python3 receive.py
+```
 
 
 ## Requirements
 
 - python >=3.6
+- numpy
+- pandas
+- scikit-learn
+- graphviz
+- scapy
 
 ## References
 
